@@ -132,9 +132,9 @@ jQuery.extend(Boxy, {
         afterShow:              Boxy.EF,        // callback fired after dialog becomes visible. executes in context of Boxy instance.
         afterHide:              Boxy.EF,        // callback fired after dialog is hidden. executed in context of Boxy instance.
         beforeUnload:           Boxy.EF,        // callback fired after dialog is unloaded. executed in context of Boxy instance.
-        showFade:               false, 
-        hideFade:               false,
-        hideShrink:             'vertical'
+        showFade:               false,
+        hideFade:               true,
+        hideShrink:             null            // can be 'vertical' or 'horizontal', but defaulting it to null
     },
     
     IE6:                (jQuery.browser.msie && jQuery.browser.version < 7),
