@@ -253,10 +253,9 @@ jQuery.extend(Boxy, {
         return jQuery('.boxy-modal-blackout').length > 0;
     },
     
-    // Completely remove a Boxy object from the DOM
-    close: function(ele) {
-      ele = ele || '.boxy-inner';
-      Boxy.get(jQuery(ele)).hideAndUnload();
+    // allow users to call [boxy object].close();
+    close: function() {
+      this.options.unloadOnHide ? this.hideAndUnload() : this.hide();
     }
     
     _u: function() {
